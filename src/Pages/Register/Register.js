@@ -29,6 +29,7 @@ const Register = () => {
    const [username, setUsername] = useState('');
    const [password, setPassword] = useState('');
    const [file, setFile] = useState(null);
+   const [showPassword, setShowPassword] = useState(false);
 
    const handleClick = (e) => {
       e.preventDefault();
@@ -122,12 +123,29 @@ const Register = () => {
                   className="inputText"
                   onChange={(e) => setEmail(e.target.value)}
                />
-               <input
+               {/* <input
                   type="password"
                   placeholder="Password"
                   className="inputText"
                   onChange={(e) => setPassword(e.target.value)}
-               />
+               /> */}
+               <div className="passwordContainer">
+                  <input
+                     type={showPassword ? 'text' : 'password'}
+                     placeholder="Password"
+                     className="inputText"
+                     onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <button
+                     type="button"
+                     className="togglePasswordBtn"
+                     onClick={() => {
+                        setShowPassword(!showPassword);
+                     }}
+                  >
+                     {showPassword ? '🙈' : '👁️'}
+                  </button>
+               </div>
 
                <button className="btnForSignup" onClick={handleClick}>
                   Sign Up

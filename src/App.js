@@ -19,7 +19,6 @@ const App = () => {
       <div className="App">
          <BrowserRouter>
             <Routes>
-               {/*  <Route path="/" element={<Home />} /> */}
                <Route
                   path="/"
                   element={
@@ -32,11 +31,7 @@ const App = () => {
                />
 
                <Route path="/Profile/:id" element={<Profile />} />
-               {/* <Route path="/login" element={<Login />} /> */}
-               {/*  <Route
-                  path="/login"
-                  element={user !== null ? <Navigate to={'/'} /> : <Login />}
-               /> */}
+
                <Route
                   path="/login"
                   element={
@@ -46,7 +41,7 @@ const App = () => {
                         <Login />
                      )
                   }
-               ></Route>
+               />
 
                <Route path="/signup" element={<Register />}></Route>
                <Route

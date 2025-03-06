@@ -46,7 +46,7 @@ const Login = () => {
                <button className="btnForSignup" onClick={handleClick}>
                   Login
                </button>
-               <Link to={'/forgotPassword'}>
+               <Link to={'/forgot/password'}>
                   <p style={{ textAlign: 'start', marginLeft: '30.6%' }}>
                      Forgot Password?
                   </p>
